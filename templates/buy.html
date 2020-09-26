@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy shares
+{% endblock %}
+
+{% block main %}
+    <form action="/buy" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="symbol" placeholder="Stock symbol" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" align = "left" name="shares" placeholder="Number of shares" type="number" min = 0>
+        </div>
+        <p class="form-group"> Stock price = <a href="/quote">Quote stock</a> </p>
+        <button class="btn btn-primary" type="submit">Buy shares now</button>
+    </form>
+{% endblock %}

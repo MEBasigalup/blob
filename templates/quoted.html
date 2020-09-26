@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote {{ symbol }}
+{% endblock %}
+
+{% block main %}
+    <dl>
+        <dt>Symbol: </dt> <dd> {{ symbol }} </dd>
+        <dt>Name: </dt><dd> {{ name }} </dd>
+        <dt>Price:</dt><dd> {{ price }} </dd>
+    </dl>
+    <button class="btn btn-primary" onclick="redirect('/buy')";" value="Redirect">Buy stock </a></button>
+{% endblock %}

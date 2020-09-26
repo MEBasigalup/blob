@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy shares
+{% endblock %}
+
+{% block main %}
+    <form action="/sell" method="post">
+        <p>Congratulations! You sold {{ quantity }} shares of {{ name }} for a total of {{ total }} dollars. </p>
+        <br></br>
+        <p>Remaining {{ name }} shares in account: {{ n }}.</p>
+        <p>Amount left in account: {{ cash }} dollars.</p>
+    </form>
+{% endblock %}
