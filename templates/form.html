@@ -1,0 +1,213 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
+    <h1 class="mb-3">This is a survey about how many Argentinian food you would like to be sent to your house!</h1>
+    <h3 class="mb-3">General info</h3>
+
+    <!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
+    <form action="/form" method="post" class="needs-validation" novalidate>
+      <div class="form-row">
+        <div class="col-md-4 mb-3">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" name="name" placeholder="Name" required>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please complete your name.</div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Email" required>
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please provide a valid email address.</div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="street">Street name and number</label>
+          <input type="text" class="form-control" name="street" placeholder="Street" required>
+          <div class="invalid-feedback">Please provide a street name.</div>
+        </div>
+        <div class="col-md-2 mb-3">
+          <label for="zip">Zip code</label>
+          <input type="number" class="form-control" min="1" name="zip" placeholder="Zip" required>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please provide a valid zip.</div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-3 mb-3">
+          <label for="city">City</label>
+          <input type="text" class="form-control" name="city" placeholder="City" required>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please provide a valid city.</div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="state">State</label>
+          <input type="text" class="form-control" name="state" placeholder="State">
+        </div>
+        <div class="col-md-2 mb-3">
+          <label for="country">Country</label>
+          <input type="text" class="form-control" name="country" placeholder="Country" required>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please provide a valid country.</div>
+        </div>
+      </div>
+
+      <br></br>
+
+      <h3 class="mb-3">Order</h3>
+
+      <div class="form-row">
+        <div class="custom-control form-checkbox col-md-1"></div>
+        <div class="custom-control custom-checkbox col-md-2">
+          <input type="checkbox" class="custom-control-input" name="empanadas">
+          <label class="custom-control-label" for="empanadas">Empanadas </label>
+          <div class="invalid-feedback">Must select item!</div>
+        </div>
+        <div class="col-md-2 mb-3">
+            <select class="custom-select" name="q_empanadas" required>
+              <option value="" disabled>Select Quantity</option>
+              <option selected value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+        </div>
+        <div class="invalid-feedback">Please select a quantity! If zero is desired, select 0</div>
+      </div>
+
+      <div class="form-row">
+        <div class="custom-control form-checkbox col-md-1"></div>
+        <div class="custom-control custom-checkbox col-md-2">
+          <input type="checkbox" class="custom-control-input" name="milanesas">
+          <label class="custom-control-label" for="milanesas">Milanesas </label>
+          <div class="invalid-feedback">Must select item!</div>
+        </div>
+        <div class="col-md-2 mb-3">
+            <select class="custom-select" name="q_milanesas" required>
+              <option value="" disabled>Select Quantity</option>
+              <option selected value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+        </div>
+        <div class="invalid-feedback">Please select a quantity! If zero is desired, select 0</div>
+      </div>
+
+      <div class="form-row">
+        <div class="custom-control form-checkbox col-md-1"></div>
+        <div class="custom-control custom-checkbox col-md-2">
+          <input type="checkbox" class="custom-control-input" name="locro">
+          <label class="custom-control-label" for="locro">Locro </label>
+          <div class="invalid-feedback">Must select item!</div>
+        </div>
+        <div class="col-md-2 mb-3">
+            <select class="custom-select" name="q_locro" required>
+              <option value="" disabled>Select Quantity</option>
+              <option selected value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+        </div>
+        <div class="invalid-feedback">Please select a quantity! If zero is desired, select 0</div>
+      </div>
+
+      <div class="form-row">
+        <div class="custom-control form-checkbox col-md-1"></div>
+        <div class="custom-control custom-checkbox col-md-2">
+          <input type="checkbox" class="custom-control-input" name="chocotorta">
+          <label class="custom-control-label" for="chocotorta">Chocotorta </label>
+          <div class="invalid-feedback">Must select item!</div>
+        </div>
+        <div class="col-md-2 mb-3">
+            <select class="custom-select" name="q_chocotorta" required>
+              <option value="" disabled>Select Quantity</option>
+              <option selected value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+        </div>
+        <div class="invalid-feedback">Please select a quantity! If zero is desired, select 0</div>
+      </div>
+
+      <div class="form-row">
+        <div class="custom-control form-checkbox col-md-1"></div>
+        <div class="custom-control custom-checkbox col-md-2">
+          <input type="checkbox" class="custom-control-input" name="ddl">
+          <label class="custom-control-label" for="ddl">Dulce de leche </label>
+          <div class="invalid-feedback">Must select item!</div>
+        </div>
+        <div class="col-md-2 mb-3">
+            <select class="custom-select" name="q_ddl" required>
+              <option value="" disabled>Select Quantity</option>
+              <option selected value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+        </div>
+        <div class="invalid-feedback">Please select a quantity! If zero is desired, select 0</div>
+      </div>
+
+      <div class="form-row">
+        <div class="custom-control form-checkbox col-md-1"></div>
+        <div class="custom-control custom-checkbox col-md-2">
+          <input type="checkbox" class="custom-control-input" name="mate">
+          <label class="custom-control-label" for="mate">Mate    </label>
+          <div class="invalid-feedback">Must select item!</div>
+        </div>
+        <div class="col-md-2 mb-3">
+            <select class="custom-select" name="q_mate" required>
+              <option value="" disabled>Select Quantity</option>
+              <option selected value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+        </div>
+        <div class="invalid-feedback">Please select a quantity! If zero is desired, select 0</div>
+      </div>
+
+      <!-- http://getbootstrap.com/docs/4.1/components/buttons/ -->
+      <button class="btn btn-primary" type="submit">Submit!</button>
+    </form>
+
+    <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+    </script>
+
+{% endblock %}
